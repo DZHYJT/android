@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#1976D2"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+            <!-- android:layout_gravity="center" 水平居中 + 垂直居中-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="个人中心"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#9A9A9A" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:id="@+id/setting_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_background"
+        android:orientation="horizontal"
+        android:paddingTop="60dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/myPhoto"
+            android:layout_width="81dp"
+            android:layout_height="103dp"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="20sp"
+            android:src="@drawable/touxiang" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/account"
+                style="@style/MyText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账号:" />
+
+            <TextView
+                android:id="@+id/lastLoginTime"
+                style="@style/MyText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/account"
+                android:text="上次登录:" />
+
+            <TextView
+                android:id="@+id/setting_tv_account"
+                style="@style/MyText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/account"
+                android:paddingLeft="10dp"
+                android:text="乖乖兔" />
+
+            <TextView
+                android:id="@+id/fragmentSetting_tv_lastLoginTime"
+                style="@style/MyText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setting_tv_account"
+                android:layout_alignBottom="@+id/lastLoginTime"
+                android:layout_toRightOf="@+id/lastLoginTime"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="2022年12月16日"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"></View>
+
+    <LinearLayout
+        android:id="@+id/setting_ll_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_background"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20sp"
+            android:src="@drawable/shoucang"
+            app:tint="@color/color_setting_icon"></ImageView>
+
+        <Button
+            android:id="@+id/Mycollect"
+            style="@style/MyText2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20sp"
+            android:gravity="center_vertical"
+            android:text="我的收藏"
+            app:backgroundTint="@color/grey_background"></Button>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"></View>
+
+    <LinearLayout
+        android:id="@+id/setting_ll_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20sp"
+            android:src="@drawable/mima"
+            app:tint="@color/color_setting_icon"></ImageView>
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/MyText2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20sp"
+            android:gravity="center_vertical"
+            android:text="修改密码"
+            app:backgroundTint="@color/grey_background"></Button>
+
+        <!--    </LinearLayout>-->
+
+        <!--    <View-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="1dp"-->
+        <!--        android:background="@color/black"></View>-->
+
+        <!--    <View-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="1sp"></View>-->
+
+        <!--    <LinearLayout-->
+        <!--        android:id="@+id/setting_ll_version"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:background="@color/grey_background"-->
+        <!--        android:orientation="horizontal">-->
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="30dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_gravity="center_vertical"-->
+        <!--            android:layout_marginLeft="20sp"-->
+        <!--            android:src="@drawable/zhanghaoming"-->
+        <!--            app:tint="@color/color_setting_icon"></ImageView>-->
+
+        <!--        <Button-->
+        <!--            style="@style/MyText2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_gravity="center_vertical"-->
+        <!--            android:layout_marginLeft="20sp"-->
+        <!--            android:gravity="center_vertical"-->
+        <!--            android:text="修改账号"-->
+        <!--            app:backgroundTint="@color/grey_background"></Button>-->
+        <!--    </LinearLayout>-->
+
+        <!--    <View-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="1dp"-->
+        <!--        android:background="@color/black"></View>-->
+
+        <!--    <LinearLayout-->
+        <!--        android:id="@+id/setting"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:background="@color/grey_background"-->
+        <!--        android:orientation="horizontal">-->
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="30dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_gravity="center_vertical"-->
+        <!--            android:layout_marginLeft="20sp"-->
+        <!--            android:src="@drawable/version"-->
+        <!--            app:tint="@color/color_setting_icon"></ImageView>-->
+
+        <!--        <Button-->
+        <!--            style="@style/MyText2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_gravity="center_vertical"-->
+        <!--            android:layout_marginLeft="20sp"-->
+        <!--            android:gravity="center_vertical"-->
+        <!--            android:text="版本信息"-->
+        <!--            app:backgroundTint="@color/grey_background"></Button>-->
+
+    </LinearLayout>
+</LinearLayout>
